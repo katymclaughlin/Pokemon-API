@@ -1,13 +1,14 @@
 .jumbotron{
     background-image: radial-gradient(
         rgba(0,0,0,0),
-        rgba(0,0,0,.25),
+        rgba(0,0,0,.10),
         rgba(0,0,0,.5),
-        rgba(0,0,0,.75),
+        rgba(0,0,0,.25),
         rgba(0,0,0,1)),
-    url(pikachu.jpg);
+    url(pokemon2.jpeg);
     color: white;
-    background-size: auto 100%; 
+    background-size: cover; 
+    background-repeat: no-repeat;
     height: 60vh;
 }
 
