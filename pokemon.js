@@ -1,24 +1,3 @@
-/*let pokemonMoves = document.querySelector("ul");
-
-fetch("https://pokeapi.co/api/v2/move/")
-    .then(function (response) {
-        //console.log(response);
-        return response.json();
-    })
-    .then(function(json) {
-        //console.log(json);
-        let moves = json.results;
-
-        for (const m of moves) {
-            //console.log(p);
-            let listItem = document.createElement('li'); 
-            listItem.innerText = m.name;
-            pokemonMoves.appendChild(listItem);
-        }
-
-    })
-*/
-
 fetch("https://pokeapi.co/api/v2/move/")
 .then ((data1)=>{
     //console.log(data1);
@@ -35,7 +14,7 @@ fetch("https://pokeapi.co/api/v2/move/")
         document.getElementById("table_body").innerHTML=tableData;
     })
 
-   fetch ("https://pokeapi.co/api/v2/pokemon-color/")
+fetch ("https://pokeapi.co/api/v2/pokemon-color/")
     .then ((data)=>{
        // console.log(data); //json format
         return data.json(); //converted to object
@@ -54,7 +33,7 @@ fetch("https://pokeapi.co/api/v2/move/")
     })
 
 
-   fetch ("https://pokeapi.co/api/v2/pokemon-habitat/")
+fetch ("https://pokeapi.co/api/v2/pokemon-habitat/")
    .then ((data2)=>{
       // console.log(data); //json format
        return data2.json(); //converted to object
@@ -71,3 +50,75 @@ fetch("https://pokeapi.co/api/v2/move/")
    }) .catch((errMessage)=>{
        console.log(errMessage)
    })
+
+fetch ("https://pokeapi.co/api/v2/pokemon-shape/")
+   .then ((data3)=>{
+      // console.log(data); //json format
+       return data3.json(); //converted to object
+   }) .then(function(json){
+   let shape = json.results;
+   console.log(shape);
+      let tableData3="";
+       shape.map((values)=>{
+           tableData3+=`<tr>
+           <td>${values.name}</td>
+         </tr>`;
+       });
+       document.getElementById("table_body3").innerHTML=tableData3;
+   }) .catch((errMessage)=>{
+       console.log(errMessage)
+   })
+
+fetch ("https://pokeapi.co/api/v2/egg-group/")
+   .then ((data4)=>{
+      // console.log(data); //json format
+       return data4.json(); //converted to object
+   }) .then(function(json){
+   let egg = json.results;
+   console.log(egg);
+      let tableData4="";
+       egg.map((values)=>{
+           tableData4+=`<tr>
+           <td>${values.name}</td>
+         </tr>`;
+       });
+       document.getElementById("table_body4").innerHTML=tableData4;
+   }) .catch((errMessage)=>{
+       console.log(errMessage)
+   })
+
+fetch ("https://pokeapi.co/api/v2/berry-flavor/")
+   .then ((data5)=>{
+      // console.log(data); //json format
+       return data5.json(); //converted to object
+   }) .then(function(json){
+   let berry = json.results;
+   console.log(berry);
+      let tableData5="";
+       berry.map((values)=>{
+           tableData5+=`<tr>
+           <td>${values.name}</td>
+         </tr>`;
+       });
+       document.getElementById("table_body5").innerHTML=tableData5;
+   }) .catch((errMessage)=>{
+       console.log(errMessage)
+   })
+
+fetch ("https://pokeapi.co/api/v2/generation/")
+   .then ((data6)=>{
+      // console.log(data); //json format
+       return data6.json(); //converted to object
+   }) .then(function(json){
+   let games = json.results;
+   console.log(games);
+      let tableData6="";
+       games.map((values)=>{
+           tableData6+=`<tr>
+           <td>${values.name}</td>
+         </tr>`;
+       });
+       document.getElementById("table_body6").innerHTML=tableData6;
+   }) .catch((errMessage)=>{
+       console.log(errMessage)
+   })   
