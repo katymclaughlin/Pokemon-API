@@ -10,3 +10,12 @@
     background-size: auto 100%; 
     height: 80vh;
 }
+
+.container{
+    float: left;
+    position: relative;
+    width: 125px;
+    margin: 0 0.5em 2.0em 3em;
+    padding: 1.0em;
+}
+
